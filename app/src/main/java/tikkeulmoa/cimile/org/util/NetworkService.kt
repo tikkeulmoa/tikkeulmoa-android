@@ -30,4 +30,10 @@ interface NetworkService {
     fun postDepositResponse(
         @Body body: PostDepositResponseData
     ):Call<PostDepositResponse>
+
+    //출금
+    @POST("/api/withdraw")
+    fun postWithdrawResponse(
+        @Body body: PostWithdrawResponseData
+    ):Call<PostWithdrawResponse>
 }

@@ -19,10 +19,13 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/bottom_arrow"/>
             <TextView
-
+                    android:id="@+id/address"
                     android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="13.8sp"
+                    android:textColor="#acacac"
+                    android:fontFamily="@font/nanumsquare_acr"
                     android:text="1100-12-09-002"/>
         </RelativeLayout>
         <LinearLayout
@@ -37,9 +40,12 @@
                     android:src="@drawable/won_sign"/>
             <EditText
                     android:id="@+id/deposit_money"
+                    android:textColor="#525252"
+                    android:fontFamily="@font/nanumsquare_acb"
                     android:paddingLeft="10dp"
                     android:layout_width="210dp"
                     android:layout_height="wrap_content"
+                    android:inputType="number"
                     android:textSize="25sp"/>
         </LinearLayout>
 
@@ -50,6 +56,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/dialog_blank"
+                android:inputType="text"
+                android:textSize="13.8sp"
+                android:textColor="#acacac"
+                android:fontFamily="@font/nanumsquare_acr"
                 android:hint="메모 입력"/>
         <EditText
                 android:id="@+id/password_deposit"
@@ -58,6 +68,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/dialog_blank"
+                android:inputType="numberPassword"
+                android:textSize="13.8sp"
+                android:textColor="#acacac"
+                android:fontFamily="@font/nanumsquare_acr"
                 android:hint="비밀번호 입력"/>
         <ImageView
                 android:id="@+id/btn_real_deposit"
