@@ -12,10 +12,17 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ui.community.CalendarActivity">
+        </activity>
+        <activity android:name=".ui.community.WriteActivity">
+        </activity>
+        <activity android:name=".ui.community.NoticeAllActivity">
+        </activity>
+        <activity android:name=".ui.community.CommunityMakingActivity">
+        </activity>
         <activity android:name=".ui.community.CommunityDetailActivity">
         </activity>
         <activity android:name=".ui.account.AccountDetailActivity">
-
         </activity>
         <activity android:name=".ui.account.AccountMakingActivity">
         </activity>

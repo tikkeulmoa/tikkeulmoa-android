@@ -2,6 +2,8 @@ package tikkeulmoa.cimile.org.ui.community
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_community_detail.*
+import org.jetbrains.anko.startActivity
 import tikkeulmoa.cimile.org.R
 
 class CommunityDetailActivity : AppCompatActivity() {
@@ -9,5 +11,22 @@ class CommunityDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_community_detail)
+
+        setOnClickListener()
+    }
+
+    private fun setOnClickListener() {
+        btn_community_detail_act_notice_all.setOnClickListener {
+            startActivity<NoticeAllActivity>()
+        }
+        btn_write.setOnClickListener {
+            startActivity<WriteActivity>()
+        }
+        btn_community_detail_act_plus_member.setOnClickListener {
+            //멤버추가하는 다이얼로그 띄우기
+        }
+        btn_calendar_go.setOnClickListener {
+            startActivity<CalendarActivity>()
+        }
     }
 }
