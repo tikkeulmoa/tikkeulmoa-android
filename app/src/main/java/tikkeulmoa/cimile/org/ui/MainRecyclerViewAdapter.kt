@@ -23,15 +23,15 @@ class MainRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<AccountD
     override fun getItemCount(): Int = dataList.size
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder.account_num.text = dataList[position].account_number
+        holder.account_num.text = dataList[position].acount_number
         holder.account_name.text = dataList[position].name
         holder.account_balance.text = dataList[position].price.toString()
         holder.btn_account.setOnClickListener {
             ctx.startActivity<AccountDetailActivity>("group_idx" to dataList[position].idx)
         }
         if(dataList[position].exist == 0){
-            holder.non_exist.visibility = View.GONE
-            holder.exist.visibility = View.VISIBLE
+            holder.non_exist.visibility = View.VISIBLE
+            holder.exist.visibility = View.GONE
         } else if(dataList[position].exist == 1){
             holder.non_exist.visibility = View.GONE
             holder.exist.visibility = View.VISIBLE
