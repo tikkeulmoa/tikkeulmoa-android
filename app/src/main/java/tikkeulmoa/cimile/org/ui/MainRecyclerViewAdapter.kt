@@ -10,11 +10,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.jetbrains.anko.startActivity
 import tikkeulmoa.cimile.org.R
-import tikkeulmoa.cimile.org.model.accountData
+import tikkeulmoa.cimile.org.model.AccountData
 import tikkeulmoa.cimile.org.ui.account.AccountDetailActivity
+import tikkeulmoa.cimile.org.ui.community.CommunityDetailActivity
 
-class MainRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<accountData>): RecyclerView.Adapter<MainRecyclerViewAdapter.Holder>(){
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MainRecyclerViewAdapter.Holder {
+class MainRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<AccountData>): RecyclerView.Adapter<MainRecyclerViewAdapter.Holder>(){
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): Holder {
         val view: View = LayoutInflater.from(ctx).inflate(R.layout.rv_item_main_account,viewGroup,false)
         return Holder(view)
     }
@@ -22,21 +23,21 @@ class MainRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<accountD
     override fun getItemCount(): Int = dataList.size
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder.account_num.text = dataList[position].num
+        holder.account_num.text = dataList[position].account_number
         holder.account_name.text = dataList[position].name
         holder.account_balance.text = dataList[position].price.toString()
         holder.btn_account.setOnClickListener {
-            //ctx.startActivity<CommunityDetailActivity>("group_idx" to dataList[position].idx)
+            ctx.startActivity<AccountDetailActivity>("group_idx" to dataList[position].idx)
         }
-        if(dataList[position].commu_flag == 0){
+        if(dataList[position].exist == 0){
             holder.non_exist.visibility = View.GONE
             holder.exist.visibility = View.VISIBLE
-        } else if(dataList[position].commu_flag == 1){
+        } else if(dataList[position].exist == 1){
             holder.non_exist.visibility = View.GONE
             holder.exist.visibility = View.VISIBLE
         }
         holder.btn_community.setOnClickListener {
-            ctx.startActivity<AccountDetailActivity>("group_idx" to dataList[position].idx)
+            ctx.startActivity<CommunityDetailActivity>("group_idx" to dataList[position].idx)
         }
     }
 
