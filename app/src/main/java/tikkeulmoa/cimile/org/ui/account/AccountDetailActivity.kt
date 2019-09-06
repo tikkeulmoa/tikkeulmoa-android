@@ -57,11 +57,14 @@ class AccountDetailActivity : AppCompatActivity() {
                 response: Response<GetDpsAndWtdrListResponse>
             ) {
 
-                if(response!!.isSuccessful){
-                    dataList = response.body()!!.data
-                    accountDetailAdapter.dataList = dataList
+                if(response.isSuccessful){
+                    if(response.body()!!.data!=null){
+                        dataList = response.body()!!.data
+                        accountDetailAdapter.dataList = dataList
 
-                    rcv_account_detail.adapter = accountDetailAdapter
+                        rcv_account_detail.adapter = accountDetailAdapter
+                    }
+
 
                 }else{
 

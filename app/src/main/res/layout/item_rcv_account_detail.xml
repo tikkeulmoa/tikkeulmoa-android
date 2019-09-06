@@ -15,6 +15,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="12.5sp"
                 android:textColor="#000000"
+                android:fontFamily="@font/nanumsquare_acr"
                 android:text="19.09.03"/>
         <RelativeLayout
                 android:layout_alignParentRight="true"
@@ -26,6 +27,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
                     android:textColor="#353535"
+                    android:fontFamily="@font/nanumsquare_acb"
                     android:text="으밍공듀"/>
             <TextView
                     android:id="@+id/account_user_memo"
@@ -34,6 +36,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
                     android:textColor="#3a3a3a"
+                    android:fontFamily="@font/nanumsquare_acr"
                     android:text="전주여행 9월달 회비"/>
             <RelativeLayout
                     android:paddingRight="15dp"
