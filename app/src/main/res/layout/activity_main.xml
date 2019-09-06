@@ -1,19 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-</RelativeLayout>
+    tools:context=".ui.MainActivity"
+    android:background="@color/backgroud">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/logo"/>
+        <ImageView
+                android:id="@+id/btn_main_act_make_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="19dp"
+                android:src="@drawable/make_account"/>
+        <RelativeLayout
+                android:id="@+id/top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="80dp">
+            <TextView
+                    android:id="@+id/tv_main_act_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="김티끌"
+                    android:textColor="#404040"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/nanumsquare_acr"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="님,"
+                    android:textColor="#404040"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/nanumsquare_acr"
+                    android:layout_alignBottom="@id/tv_main_act_name"
+                    android:layout_toRightOf="@id/tv_main_act_name"
+                    android:layout_marginLeft="5dp"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_main_act_name"
+                    android:src="@drawable/comment"
+                    android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_main_act_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/top">
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
