@@ -60,6 +60,7 @@
                 android:fontFamily="@font/nanumsquare_acr"
                 android:background="@drawable/input_blank"/>
         <ImageView
+                android:id="@+id/btn_login_act_login"
                 android:layout_marginTop="50sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

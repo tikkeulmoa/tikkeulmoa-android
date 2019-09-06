@@ -8,7 +8,7 @@ data class GetAccountListResponse (
 
 data class AccountData(
     val idx: Int,
-    val account_number: String,
+    val acount_number: String,
     val name: String,
     val master_idx: Int,
     val price: Int,
