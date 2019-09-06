@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.jetbrains.anko.startActivity
 import tikkeulmoa.cimile.org.R
-import tikkeulmoa.cimile.org.accountData
+import tikkeulmoa.cimile.org.model.accountData
 import tikkeulmoa.cimile.org.ui.account.AccountDetailActivity
 
 class MainRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<accountData>): RecyclerView.Adapter<MainRecyclerViewAdapter.Holder>(){

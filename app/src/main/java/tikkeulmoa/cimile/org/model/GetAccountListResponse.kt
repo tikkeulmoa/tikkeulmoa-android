@@ -1,4 +1,4 @@
-package tikkeulmoa.cimile.org
+package tikkeulmoa.cimile.org.model
 
 data class GetAccountListResponse (
     val status: Int,
