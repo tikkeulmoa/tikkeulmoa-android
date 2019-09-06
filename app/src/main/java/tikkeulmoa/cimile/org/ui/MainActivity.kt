@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
     private fun setOnClickListener() {
         btn_main_act_make_account.setOnClickListener {
             startActivity<AccountMakingActivity>()
+            finish()
         }
     }
 }
