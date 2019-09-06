@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:gravity="center_horizontal"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud"
+        tools:context=".ui.login.LoginActivity"
+        android:orientation="vertical"
+        >
+
+        <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이디 로그인"
+                android:textSize="14sp"
+                android:textColor="@color/titleText"
+                android:fontFamily="@font/nanumsquare_acb"/>
+        <View
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/line">
+
+        </View>
+
+        <TextView
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이디와 비밀번호 입력"
+                android:textSize="14sp"
+                android:textColor="@color/pointText"
+                android:fontFamily="@font/nanumsquare_acb"/>
+
+        <EditText
+                android:layout_marginTop="30dp"
+                android:layout_width="270.8dp"
+                android:layout_height="34.5dp"
+                android:paddingLeft="10dp"
+                android:hint="아이디"
+                android:textColorHint="#747474"
+                android:textSize="14sp"
+                android:textColor="@color/titleText"
+                android:fontFamily="@font/nanumsquare_acr"
+                android:background="@drawable/input_blank"/>
+
+        <EditText
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="비밀번호"
+                android:textColorHint="#747474"
+                android:textSize="14sp"
+                android:textColor="@color/titleText"
+                android:fontFamily="@font/nanumsquare_acr"
+                android:background="@drawable/input_blank"/>
+        <ImageView
+                android:layout_marginTop="50sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_login"/>
+
+    <RelativeLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/invalid_name"/>
+        <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/simple_login"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
