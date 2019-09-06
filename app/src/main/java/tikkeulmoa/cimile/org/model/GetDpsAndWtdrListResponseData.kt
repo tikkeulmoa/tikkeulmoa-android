@@ -8,6 +8,7 @@ data class GetDpsAndWtdrListResponseData (
    val balance : String,
    val is_in : Int,
    val memo : String,
-   val date : String
+   val date : String,
+   val name : String
 
 )

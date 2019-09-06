@@ -27,7 +27,11 @@ class MainRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<AccountD
         holder.account_name.text = dataList[position].name
         holder.account_balance.text = dataList[position].price.toString()
         holder.btn_account.setOnClickListener {
-            ctx.startActivity<AccountDetailActivity>("group_idx" to dataList[position].idx)
+            ctx.startActivity<AccountDetailActivity>("group_idx" to dataList[position].idx,
+                "account_num" to dataList[position].acount_number,
+                "account_name" to dataList[position].name,
+                "account_money" to dataList[position].price)
+
         }
         if(dataList[position].exist == 0){
             holder.non_exist.visibility = View.VISIBLE
