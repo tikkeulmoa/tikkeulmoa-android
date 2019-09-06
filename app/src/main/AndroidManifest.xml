@@ -27,13 +27,14 @@
         <activity android:name=".ui.account.AccountMakingActivity">
         </activity>
         <activity android:name=".ui.login.LoginActivity">
-        </activity>
-        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.MainActivity">
+
         </activity>
     </application>
 
