@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="100dp">
+    <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/account_detail_date"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12.5sp"
+                android:textColor="#000000"
+                android:text="19.09.03"/>
+        <RelativeLayout
+                android:layout_alignParentRight="true"
+                android:layout_width="330dp"
+                android:layout_height="40dp">
+            <TextView
+                    android:id="@+id/account_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12.5sp"
+                    android:textColor="#353535"
+                    android:text="으밍공듀"/>
+            <TextView
+                    android:id="@+id/account_user_memo"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#3a3a3a"
+                    android:text="전주여행 9월달 회비"/>
+            <RelativeLayout
+                    android:paddingRight="15dp"
+                    android:id="@+id/top"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/account_deposit_text"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/account_deposit_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12.5sp"
+                        android:textColor="#3672d3"
+                        android:fontFamily="@font/nanumsquare_acr"
+                        android:text="입금"/>
+                <TextView
+                        android:id="@+id/account_deposit_money"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/won"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16.2sp"
+                        android:textColor="#3672d3"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:text="18,400"/>
+                <TextView
+                        android:id="@+id/won"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12.5sp"
+                        android:textColor="#3672d3"
+                        android:fontFamily="@font/nanumsquare_acr"
+                        android:text="원"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:paddingRight="15dp"
+                    android:layout_below="@+id/top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/account_total"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/account_total_money"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12.5sp"
+                        android:textColor="#595959"
+                        android:fontFamily="@font/nanumsquare_acr"
+                        android:text="잔액"/>
+                <TextView
+                        android:id="@+id/account_total_money"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/total_won"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="#595959"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:text="200,500"/>
+                <TextView
+                        android:id="@+id/total_won"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12.5sp"
+                        android:textColor="#595959"
+                        android:fontFamily="@font/nanumsquare_acr"
+                        android:text="원"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#efefef"/>
+
+
+
+
+</RelativeLayout>
