@@ -41,6 +41,7 @@ class AccountDetailAdapter(val ctx : Context, var dataList:ArrayList<GetDpsAndWt
         }
         holder.total_money.text = dataList[position].balance
         holder.memo.text = dataList[position].memo
+        holder.name.text = dataList[position].name
 
 
 
