@@ -5,11 +5,16 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.account.AccountDetailActivity">
+        tools:context=".ui.account.AccountDetailActivity"
+        android:orientation="vertical">
 
     <RelativeLayout
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="240dp"
+            android:background="#f7fafe">
         <ImageView
                 android:id="@+id/btn_checkcard"
                 android:layout_alignParentRight="true"
@@ -23,46 +28,111 @@
                 android:layout_height="100dp">
             <TextView
                     android:id="@+id/account_detail_name"
+                    android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="22.5sp"
+                    android:textColor="#2e2e2e"
+                    android:fontFamily="@font/nanumsquare_acb"
                     android:text="전주여행 계"/>
             <TextView
                     android:id="@+id/account_detail_number"
+                    android:layout_centerHorizontal="true"
                     android:layout_below="@+id/account_detail_name"
+                    android:layout_marginTop="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="12.5sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/nanumsquare_acr"
                     android:text="1100-12-09-002"/>
+            <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <ImageView
 
-            <ImageView
-                    android:id="@+id/coins"
-                    android:layout_alignParentBottom="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/coins"/>
+                        android:id="@+id/coins"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/coins"/>
 
-            <TextView
-                    android:layout_toRightOf="@+id/coins"
-                    android:layout_alignParentBottom="true"
-                    android:id="@+id/account_detail_money"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="18,400"/>
-            <TextView
-                    android:layout_toRightOf="@+id/account_detail_money"
-                    android:layout_alignParentBottom="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="원"/>
+                <TextView
+                        android:layout_toRightOf="@+id/coins"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:id="@+id/account_detail_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp"
+                        android:textColor="#3672d3"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:text="18,400"/>
+                <TextView
+                        android:layout_toRightOf="@+id/account_detail_money"
+                        android:layout_marginLeft="10dp"
+                        android:paddingBottom="5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/nanumsquare_acr"
+                        android:text="원"/>
+
+            </RelativeLayout>
+
+
 
         </RelativeLayout>
 
-        <ImageView
-                android:layout_alignParentBottom="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/deposit"/>
-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/deposit"/>
+            <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/withdraw"/>
+        </RelativeLayout>
+
+
     </RelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"
+            android:background="#efefef"/>
+    <TextView
+            android:paddingLeft="15dp"
+            android:background="#f8f8f8"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="12.5sp"
+            android:textColor="#494949"
+            android:gravity="center_vertical"
+            android:text="내역 조회"/>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"
+            android:background="#efefef"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_account_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 
 
 
