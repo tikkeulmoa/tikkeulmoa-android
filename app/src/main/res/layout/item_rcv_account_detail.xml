@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="100dp">
+              android:layout_height="80dp">
     <RelativeLayout
             android:layout_centerVertical="true"
             android:layout_width="match_parent"
@@ -18,13 +18,13 @@
                 android:text="19.09.03"/>
         <RelativeLayout
                 android:layout_alignParentRight="true"
-                android:layout_width="330dp"
+                android:layout_width="270dp"
                 android:layout_height="40dp">
             <TextView
                     android:id="@+id/account_user_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12.5sp"
+                    android:textSize="14sp"
                     android:textColor="#353535"
                     android:text="으밍공듀"/>
             <TextView
@@ -32,7 +32,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textColor="#3a3a3a"
                     android:text="전주여행 9월달 회비"/>
             <RelativeLayout
@@ -85,7 +85,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_toLeftOf="@+id/account_total_money"
                         android:layout_alignParentBottom="true"
-                        android:layout_centerVertical="true"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="12.5sp"
@@ -97,7 +97,6 @@
                         android:layout_marginRight="5dp"
                         android:layout_toLeftOf="@id/total_won"
                         android:layout_alignParentBottom="true"
-                        android:gravity="center_vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"

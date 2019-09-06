@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_account_detail.*
+import org.jetbrains.anko.db.INTEGER
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,7 +17,7 @@ import tikkeulmoa.cimile.org.util.NetworkService
 
 class AccountDetailActivity : AppCompatActivity() {
 
-    val groups_idx = intent.getIntExtra("group_idx",-1)
+    var groups_idx : Int = 0;
 
     val networkService: NetworkService by lazy {
         ApplicationController.instance.networkService
@@ -28,6 +29,16 @@ class AccountDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account_detail)
+
+        groups_idx = intent.getIntExtra("group_idx",-1)
+        var account_name = intent.getStringExtra("account_name")
+        var account_num = intent.getStringExtra("account_num")
+        var account_money = intent.getIntExtra("account_money",-1)
+
+        account_detail_name.text = account_name
+        account_detail_number.text = account_num
+        account_detail_money.text = account_money.toString()
+
 
         initRcv()
         getDpsAndWtdrList()
@@ -50,6 +61,8 @@ class AccountDetailActivity : AppCompatActivity() {
                     dataList = response.body()!!.data
                     accountDetailAdapter.dataList = dataList
 
+                    rcv_account_detail.adapter = accountDetailAdapter
+
                 }else{
 
                 }
@@ -60,7 +73,6 @@ class AccountDetailActivity : AppCompatActivity() {
 
     private fun initRcv(){
         accountDetailAdapter = AccountDetailAdapter(this,dataList)
-        rcv_account_detail.adapter = accountDetailAdapter
         rcv_account_detail.layoutManager = LinearLayoutManager(this)
     }
 }
