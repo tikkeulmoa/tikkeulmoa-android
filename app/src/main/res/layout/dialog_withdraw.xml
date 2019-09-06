@@ -1,7 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="270dp"
+                android:layout_height="360dp"
+                android:background="#ffffff">
 
-</LinearLayout>
+    <LinearLayout
+            android:id="@+id/layout_withdraw"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <RelativeLayout
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_toLeftOf="@id/can_withdraw_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.8sp"
+                    android:textColor="#696969"
+                    android:fontFamily="@font/nanumsquare_acr"
+                    android:text="출금가능금액"/>
+
+            <TextView
+                    android:id="@+id/can_withdraw_money"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@+id/won_withdraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.8sp"
+                    android:textColor="#626262"
+                    android:fontFamily="@font/nanumsquare_aceb"
+                    android:text="18400"/>
+            <TextView
+                    android:id="@+id/won_withdraw"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.8sp"
+                    android:textColor="#626262"
+                    android:fontFamily="@font/nanumsquare_aceb"
+                    android:text="원"/>
+
+        </RelativeLayout>
+        <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/won_sign"/>
+            <EditText
+                    android:id="@+id/withdraw_money"
+                    android:paddingLeft="10dp"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="25sp"
+                    android:textColor="#525252"
+                    android:fontFamily="@font/nanumsquare_acb"/>
+        </LinearLayout>
+
+        <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bank_name"/>
+
+        <EditText
+                android:id="@+id/withdraw_address"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13.8sp"
+                android:textColor="#626262"
+                android:textColorHint="#acacac"
+                android:inputType="number"
+                android:fontFamily="@font/nanumsquare_acr"
+                android:background="@drawable/dialog_blank"
+                android:hint="계좌번호 입력"/>
+        <EditText
+                android:id="@+id/withdraw_memo"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13.8sp"
+                android:textColor="#626262"
+                android:textColorHint="#acacac"
+                android:inputType="text"
+                android:fontFamily="@font/nanumsquare_acr"
+                android:background="@drawable/dialog_blank"
+                android:hint="메모 입력"/>
+        <EditText
+                android:id="@+id/password_withdraw"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13.8sp"
+                android:textColor="#626262"
+                android:textColorHint="#acacac"
+                android:inputType="numberPassword"
+                android:fontFamily="@font/nanumsquare_acr"
+                android:background="@drawable/dialog_blank"
+                android:hint="비밀번호 입력"/>
+
+
+    </LinearLayout>
+    <ImageView
+            android:id="@+id/img_withdraw_agree"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/withdraw_agree"/>
+
+    <ImageView
+            android:id="@+id/btn_real_withdraw"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_withdraw_before"/>
+
+
+</RelativeLayout>

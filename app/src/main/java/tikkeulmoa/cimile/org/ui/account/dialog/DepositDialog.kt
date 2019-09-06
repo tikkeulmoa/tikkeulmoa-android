@@ -23,7 +23,7 @@ import tikkeulmoa.cimile.org.util.NetworkService
 import java.io.IOException
 import java.lang.Exception
 
-class DepositDialog(activity: AccountDetailActivity, groups_idx: Int) : Dialog(activity) {
+class DepositDialog(activity: AccountDetailActivity, groups_idx: Int, addr : String) : Dialog(activity) {
     var mActivity: AccountDetailActivity = activity
 
     init{
@@ -36,6 +36,8 @@ class DepositDialog(activity: AccountDetailActivity, groups_idx: Int) : Dialog(a
         window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         setContentView(R.layout.dialog_deposit)
 //        this.setCancelable(false) //뒤로가기,터치 무력화
+
+        address.text = addr
 
         btn_real_deposit.setOnClickListener {
 

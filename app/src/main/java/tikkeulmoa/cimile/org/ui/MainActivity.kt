@@ -1,5 +1,6 @@
 package tikkeulmoa.cimile.org.ui
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,6 +19,7 @@ import tikkeulmoa.cimile.org.util.NetworkService
 
 class MainActivity : AppCompatActivity() {
 
+
     val user_idx :Int = 1
     val networkService: NetworkService by lazy {
         ApplicationController.instance.networkService
@@ -28,12 +30,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         setRecyclerView()
         getAccountListResponse()
         setOnClickListener()
     }
 
-    private fun getAccountListResponse() {
+   fun getAccountListResponse() {
         val getAccountListResponse = networkService.getAccountListResponse(user_idx)
         getAccountListResponse.enqueue(object : Callback<GetAccountListResponse> {
             override fun onFailure(call: Call<GetAccountListResponse>, t: Throwable) {
@@ -55,13 +58,13 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun setRecyclerView() {
+    fun setRecyclerView() {
         mainRecyclerViewAdapter = MainRecyclerViewAdapter(this, dataList)
         rv_main_act_list.adapter = mainRecyclerViewAdapter
         rv_main_act_list.layoutManager = LinearLayoutManager(this)
     }
 
-    private fun setOnClickListener() {
+    fun setOnClickListener() {
         btn_main_act_make_account.setOnClickListener {
             startActivity<AccountMakingActivity>()
             finish()

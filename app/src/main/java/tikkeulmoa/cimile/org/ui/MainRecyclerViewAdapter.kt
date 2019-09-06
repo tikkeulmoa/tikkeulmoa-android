@@ -14,7 +14,7 @@ import tikkeulmoa.cimile.org.model.AccountData
 import tikkeulmoa.cimile.org.ui.account.AccountDetailActivity
 import tikkeulmoa.cimile.org.ui.community.CommunityDetailActivity
 
-class MainRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<AccountData>): RecyclerView.Adapter<MainRecyclerViewAdapter.Holder>(){
+class MainRecyclerViewAdapter(val ctx: MainActivity, var dataList: ArrayList<AccountData>): RecyclerView.Adapter<MainRecyclerViewAdapter.Holder>(){
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): Holder {
         val view: View = LayoutInflater.from(ctx).inflate(R.layout.rv_item_main_account,viewGroup,false)
         return Holder(view)
@@ -31,6 +31,7 @@ class MainRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<AccountD
                 "account_num" to dataList[position].acount_number,
                 "account_name" to dataList[position].name,
                 "account_money" to dataList[position].price)
+            ctx.finish()
 
         }
         if(dataList[position].exist == 0){
