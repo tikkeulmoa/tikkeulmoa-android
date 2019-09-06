@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.account.AccountDetailActivity">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+        <ImageView
+                android:id="@+id/btn_checkcard"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/checkcard"/>
+        <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn_checkcard"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp">
+            <TextView
+                    android:id="@+id/account_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전주여행 계"/>
+            <TextView
+                    android:id="@+id/account_detail_number"
+                    android:layout_below="@+id/account_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1100-12-09-002"/>
+
+            <ImageView
+                    android:id="@+id/coins"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/coins"/>
+
+            <TextView
+                    android:layout_toRightOf="@+id/coins"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/account_detail_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18,400"/>
+            <TextView
+                    android:layout_toRightOf="@+id/account_detail_money"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="원"/>
+
+        </RelativeLayout>
+
+        <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/deposit"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -11,9 +11,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.account.AccountSecondActivity">
+        <activity android:name=".ui.account.AccountDetailActivity">
         </activity>
-        <activity android:name=".ui.account.AccountActivity">
+        <activity android:name=".ui.account.AccountMakingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

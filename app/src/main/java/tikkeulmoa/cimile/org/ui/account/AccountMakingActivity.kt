@@ -3,16 +3,16 @@ package tikkeulmoa.cimile.org.ui.account
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_account.*
+import kotlinx.android.synthetic.main.activity_account_making.*
 import tikkeulmoa.cimile.org.R
 
-class AccountActivity : AppCompatActivity() {
+class AccountMakingActivity : AppCompatActivity() {
 
     var click_flag = 1;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_account)
+        setContentView(R.layout.activity_account_making)
 
         img_account_certificate.visibility = View.INVISIBLE
         layout_account_third.visibility = View.GONE
