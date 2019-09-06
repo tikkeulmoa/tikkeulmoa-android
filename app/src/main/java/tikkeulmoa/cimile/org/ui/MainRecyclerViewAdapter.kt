@@ -13,6 +13,7 @@ import tikkeulmoa.cimile.org.R
 import tikkeulmoa.cimile.org.model.AccountData
 import tikkeulmoa.cimile.org.ui.account.AccountDetailActivity
 import tikkeulmoa.cimile.org.ui.community.CommunityDetailActivity
+import tikkeulmoa.cimile.org.ui.community.CommunityMakingActivity
 
 class MainRecyclerViewAdapter(val ctx: MainActivity, var dataList: ArrayList<AccountData>): RecyclerView.Adapter<MainRecyclerViewAdapter.Holder>(){
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): Holder {
@@ -37,13 +38,17 @@ class MainRecyclerViewAdapter(val ctx: MainActivity, var dataList: ArrayList<Acc
         if(dataList[position].exist == 0){
             holder.non_exist.visibility = View.VISIBLE
             holder.exist.visibility = View.GONE
+            holder.btn_community.setOnClickListener {
+                ctx.startActivity<CommunityMakingActivity>("group_idx" to dataList[position].idx)
+            }
         } else if(dataList[position].exist == 1){
             holder.non_exist.visibility = View.GONE
             holder.exist.visibility = View.VISIBLE
+            holder.btn_community.setOnClickListener {
+                ctx.startActivity<CommunityDetailActivity>("group_idx" to dataList[position].idx)
+            }
         }
-        holder.btn_community.setOnClickListener {
-            ctx.startActivity<CommunityDetailActivity>("group_idx" to dataList[position].idx)
-        }
+
     }
 
     inner class Holder(itemView:View): RecyclerView.ViewHolder(itemView) {

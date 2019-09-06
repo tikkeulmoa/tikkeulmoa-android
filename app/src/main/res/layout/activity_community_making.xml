@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.community.CommunityMakingActivity"
+        android:orientation="vertical"
+        android:background="@color/backgroud"
+        android:gravity="center_horizontal">
+    <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="커뮤니티 만들기"
+                android:textSize="14sp"
+                android:textColor="@color/titleText"
+                android:fontFamily="@font/nanumsquare_acb"/>
+        <ImageView
+                android:id="@+id/btn_close"
+                android:layout_alignParentRight="true"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/close"/>
+
+    </RelativeLayout>
+    <View
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/line">
+    </View>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:id="@+id/layout_account_third"
+                android:layout_marginTop="30dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="배경 이미지"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textColor="#393939"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textColor="#2c77f1"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <RelativeLayout
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:background="@drawable/blue_blank"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="티끌 추가"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textColor="#393939"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textColor="#2c77f1"/>
+            </LinearLayout>
+            <EditText
+                    android:id="@+id/account_password"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/nanumsquare_acb"
+                    android:inputType="text"
+                    android:textColor="@color/titleText"
+                    android:background="@drawable/blue_blank"/>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="간단 설명"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textColor="#393939"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textColor="#2c77f1"/>
+            </LinearLayout>
+
+            <EditText
+                    android:id="@+id/account_phoneNum"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:inputType="text"
+                    android:fontFamily="@font/nanumsquare_acb"
+                    android:textColor="@color/titleText"
+                    android:background="@drawable/blue_blank"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:id="@+id/btn_next"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#2c77f1"
+                android:gravity="center"
+                android:text="완 료"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/nanumsquare_acb"
+                android:textSize="18sp"/>
+    </RelativeLayout>
+
+</LinearLayout>
