@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_rcv_account_detail.view.*
 import tikkeulmoa.cimile.org.R
 import tikkeulmoa.cimile.org.model.GetDpsAndWtdrListResponseData
+import java.text.DecimalFormat
 
 class AccountDetailAdapter(val ctx : Context, var dataList:ArrayList<GetDpsAndWtdrListResponseData>) : RecyclerView.Adapter<AccountDetailAdapter.Holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -27,7 +28,8 @@ class AccountDetailAdapter(val ctx : Context, var dataList:ArrayList<GetDpsAndWt
             holder.is_in.text = "입금"
             holder.is_in.setTextColor(Color.parseColor("#3672d3"))
             holder.is_in_money.setTextColor(Color.parseColor("#3672d3"))
-            holder.is_in_money.text = dataList[position].price
+            var price = Integer.parseInt(dataList[position].price)
+            holder.is_in_money.text = insertComma(price)
             holder.won.setTextColor(Color.parseColor("#3672d3"))
 
         }else{
@@ -35,11 +37,13 @@ class AccountDetailAdapter(val ctx : Context, var dataList:ArrayList<GetDpsAndWt
             holder.is_in.text = "출금"
             holder.is_in.setTextColor(Color.parseColor("#67b385"))
             holder.is_in_money.setTextColor(Color.parseColor("#67b385"))
-            holder.is_in_money.text = dataList[position].price
+            var price = Integer.parseInt(dataList[position].price)
+            holder.is_in_money.text = insertComma(price)
             holder.won.setTextColor(Color.parseColor("#67b385"))
 
         }
-        holder.total_money.text = dataList[position].balance
+        var price = Integer.parseInt(dataList[position].balance)
+        holder.total_money.text = insertComma(price)
         holder.memo.text = dataList[position].memo
         holder.name.text = dataList[position].name
 
@@ -55,5 +59,10 @@ class AccountDetailAdapter(val ctx : Context, var dataList:ArrayList<GetDpsAndWt
         var won = itemView.findViewById(R.id.won) as TextView
         var is_in_money = itemView.findViewById(R.id.account_deposit_money) as TextView
         var total_money = itemView.findViewById(R.id.account_total_money) as TextView
+    }
+
+    fun insertComma(money:Int):String{
+        val formatter = DecimalFormat("###,###")
+        return formatter.format(money)
     }
 }
