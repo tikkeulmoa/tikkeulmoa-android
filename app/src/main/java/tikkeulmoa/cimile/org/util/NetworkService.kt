@@ -36,4 +36,12 @@ interface NetworkService {
     fun postWithdrawResponse(
         @Body body: PostWithdrawResponseData
     ):Call<PostWithdrawResponse>
+
+    //커뮤니티 생성하기
+    @POST("/api/community")
+    fun postCommunity(
+        @Header("Content-Type") content_type: String,
+        @Body body : JsonObject
+    ):Call<PostCommunityResponse>
+
 }

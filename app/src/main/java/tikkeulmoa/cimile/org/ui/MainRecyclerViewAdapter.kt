@@ -42,7 +42,9 @@ class MainRecyclerViewAdapter(val ctx: MainActivity, var dataList: ArrayList<Acc
             holder.non_exist.visibility = View.VISIBLE
             holder.exist.visibility = View.GONE
             holder.btn_community.setOnClickListener {
+
                 ctx.startActivity<CommunityMakingActivity>("group_idx" to dataList[position].idx)
+                ctx.finish()
             }
         } else if(dataList[position].exist == 1){
             holder.non_exist.visibility = View.GONE
