@@ -6,6 +6,7 @@ import kotlinx.android.synthetic.main.activity_community_detail.*
 import org.jetbrains.anko.startActivity
 import tikkeulmoa.cimile.org.R
 import tikkeulmoa.cimile.org.ui.calendar.CalendarActivity
+import tikkeulmoa.cimile.org.ui.community.dialog.PlusMemberDialog
 
 class CommunityDetailActivity : AppCompatActivity() {
 
@@ -17,6 +18,7 @@ class CommunityDetailActivity : AppCompatActivity() {
     }
 
     private fun setOnClickListener() {
+        val plusMemberDialog = PlusMemberDialog(this@CommunityDetailActivity)
         btn_community_detail_act_notice_all.setOnClickListener {
             startActivity<NoticeAllActivity>()
         }
@@ -24,7 +26,7 @@ class CommunityDetailActivity : AppCompatActivity() {
             startActivity<WriteActivity>()
         }
         btn_community_detail_act_plus_member.setOnClickListener {
-            //멤버추가하는 다이얼로그 띄우기
+            plusMemberDialog.show()
         }
         btn_calendar_go.setOnClickListener {
             startActivity<CalendarActivity>()
