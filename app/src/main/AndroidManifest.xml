@@ -12,6 +12,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ui.community.GoalDetailActivity">
+        </activity>
         <activity android:name=".ui.calendar.CalendarActivity">
         </activity>
         <activity android:name=".ui.community.WriteActivity">
@@ -34,7 +36,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity">
-
         </activity>
     </application>
 

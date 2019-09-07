@@ -19,7 +19,7 @@ class GoalDialog(activity: Activity) : Dialog(activity) {
         setContentView(R.layout.dialog_goal)
 //        this.setCancelable(false) //뒤로가기,터치 무력화
 
-        btn_goal_set.setOnClickListener {
+        btn_finish.setOnClickListener {
             dismiss()
         }
 

@@ -31,5 +31,8 @@ class CommunityDetailActivity : AppCompatActivity() {
         btn_calendar_go.setOnClickListener {
             startActivity<CalendarActivity>()
         }
+        btn_goal_go.setOnClickListener {
+            startActivity<GoalDetailActivity>()
+        }
     }
 }

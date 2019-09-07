@@ -37,6 +37,15 @@
                     android:layout_alignParentBottom="true"
                     android:paddingBottom="10dp"
                     android:layout_marginLeft="15dp"/>
+            <ImageView
+                    android:id="@+id/btn_goal_go"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_goal_white"
+                    android:layout_toRightOf="@id/btn_calendar_go"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="13dp"/>
         </RelativeLayout>
         <RelativeLayout
                 android:layout_width="match_parent"
