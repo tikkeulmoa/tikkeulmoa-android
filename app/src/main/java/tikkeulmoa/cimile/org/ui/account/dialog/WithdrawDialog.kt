@@ -21,6 +21,7 @@ import tikkeulmoa.cimile.org.ui.account.AccountDetailActivity
 import tikkeulmoa.cimile.org.util.ApplicationController
 import tikkeulmoa.cimile.org.util.NetworkService
 import java.lang.Exception
+import java.text.DecimalFormat
 
 class WithdrawDialog(activity: AccountDetailActivity, groups_idx: Int, money : Int) : Dialog(activity)  {
 
@@ -95,7 +96,7 @@ class WithdrawDialog(activity: AccountDetailActivity, groups_idx: Int, money : I
                     Toast.makeText(mActivity,"출금이 완료되었습니다!",Toast.LENGTH_SHORT).show()
 
                     mActivity.getDpsAndWtdrList(networkService,groups_idx)
-                    mActivity.account_detail_money.text = (mActivity.account_money-price).toString()
+                    mActivity.account_detail_money.text = insertComma(mActivity.account_money-price)
 
                     dismiss()
 
@@ -106,5 +107,10 @@ class WithdrawDialog(activity: AccountDetailActivity, groups_idx: Int, money : I
 
         })
 
+    }
+
+    fun insertComma(money:Int):String{
+        val formatter = DecimalFormat("###,###")
+        return formatter.format(money)
     }
 }

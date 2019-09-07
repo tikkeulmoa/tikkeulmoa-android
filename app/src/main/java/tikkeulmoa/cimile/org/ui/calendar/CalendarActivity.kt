@@ -1,4 +1,4 @@
-package tikkeulmoa.cimile.org.ui.community
+package tikkeulmoa.cimile.org.ui.calendar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -22,6 +22,7 @@ import tikkeulmoa.cimile.org.util.ApplicationController
 import tikkeulmoa.cimile.org.util.NetworkService
 import java.io.IOException
 import java.lang.Exception
+import java.text.DecimalFormat
 
 class DepositDialog(activity: AccountDetailActivity, groups_idx: Int, addr : String) : Dialog(activity) {
     var mActivity: AccountDetailActivity = activity
@@ -70,7 +71,7 @@ class DepositDialog(activity: AccountDetailActivity, groups_idx: Int, addr : Str
                     Toast.makeText(mActivity,"입금이 완료되었습니다!",Toast.LENGTH_SHORT).show()
 
                     mActivity.getDpsAndWtdrList(networkService,groups_idx)
-                    mActivity.account_detail_money.text = (mActivity.account_money+price).toString()
+                    mActivity.account_detail_money.text = insertComma(mActivity.account_money+price)
 
                     deposit_memo.text = null
                     deposit_money.text = null
@@ -85,6 +86,11 @@ class DepositDialog(activity: AccountDetailActivity, groups_idx: Int, addr : Str
 
         })
 
+    }
+
+    fun insertComma(money:Int):String{
+        val formatter = DecimalFormat("###,###")
+        return formatter.format(money)
     }
 
 }

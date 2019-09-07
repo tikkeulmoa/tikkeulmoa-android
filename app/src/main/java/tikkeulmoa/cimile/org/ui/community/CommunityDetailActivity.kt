@@ -5,6 +5,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_community_detail.*
 import org.jetbrains.anko.startActivity
 import tikkeulmoa.cimile.org.R
+import tikkeulmoa.cimile.org.ui.calendar.CalendarActivity
 
 class CommunityDetailActivity : AppCompatActivity() {
 

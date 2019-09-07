@@ -81,6 +81,8 @@ class AccountMakingActivity : AppCompatActivity() {
 
         btn_close.setOnClickListener {
             //정말 취소할꺼냐는 다이얼로그 추가
+            finish()
+            startActivity<MainActivity>()
         }
     }
 }
