@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_goal_detail.*
 import tikkeulmoa.cimile.org.R
+import tikkeulmoa.cimile.org.ui.community.dialog.GoalDialog
 
 class GoalDetailActivity : AppCompatActivity() {
 
@@ -25,6 +26,11 @@ class GoalDetailActivity : AppCompatActivity() {
 
         btn_back.setOnClickListener {
             finish()
+        }
+
+        val goalDialog = GoalDialog(this)
+        btn_edit.setOnClickListener {
+            goalDialog.show()
         }
     }
 }
