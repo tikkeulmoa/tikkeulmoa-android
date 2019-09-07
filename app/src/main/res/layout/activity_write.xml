@@ -45,7 +45,7 @@
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/vote"
+                android:src="@drawable/vote_2"
                 android:layout_marginLeft="15dp"
                 android:layout_marginVertical="10dp"/>
     </RelativeLayout>
@@ -70,31 +70,42 @@
             android:layout_height="0.2dp"
             android:background="@color/line">
     </View>
-    <ImageView
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <ImageView
             android:id="@+id/vote_exist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
+
             android:src="@drawable/vote_result"
             android:layout_margin="10dp"
             android:layout_gravity="center_horizontal"/>
-    <ImageView
+            <ImageView
             android:id="@+id/calender_exist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:src="@drawable/calender_result"
             android:layout_margin="10dp"
-            android:layout_gravity="center_horizontal"/>/>
-    <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@null"
-            android:textSize="14dp"
-            android:fontFamily="@font/nanumsquare_acr"
-            android:textColor="#404040"
-            android:hint="티끌들과 공유하고 싶은 소식을 남겨보세요."/>
+            android:layout_gravity="center_horizontal"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@null"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nanumsquare_acr"
+                    android:textColor="#404040"
+                    android:hint="티끌들과 공유하고 싶은 소식을 남겨보세요."/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
 
     <RelativeLayout
             android:layout_width="match_parent"

@@ -20,7 +20,7 @@ import tikkeulmoa.cimile.org.ui.account.dialog.DepositDialog
 import tikkeulmoa.cimile.org.ui.account.dialog.WithdrawDialog
 import tikkeulmoa.cimile.org.util.ApplicationController
 import tikkeulmoa.cimile.org.util.NetworkService
-
+import java.text.DecimalFormat
 
 
 class AccountDetailActivity : AppCompatActivity() {
@@ -53,7 +53,7 @@ class AccountDetailActivity : AppCompatActivity() {
 
         account_detail_name.text = account_name
         account_detail_number.text = account_num
-        account_detail_money.text = account_money.toString()
+        account_detail_money.text = insertComma(account_money)
 
 
         initRcv()
@@ -108,6 +108,11 @@ class AccountDetailActivity : AppCompatActivity() {
         startActivity<MainActivity>()
         finish()
 
+    }
+
+    fun insertComma(money:Int):String{
+        val formatter = DecimalFormat("###,###")
+        return formatter.format(money)
     }
 
 }

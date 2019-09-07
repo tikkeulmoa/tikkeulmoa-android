@@ -14,6 +14,8 @@ import tikkeulmoa.cimile.org.model.AccountData
 import tikkeulmoa.cimile.org.ui.account.AccountDetailActivity
 import tikkeulmoa.cimile.org.ui.community.CommunityDetailActivity
 import tikkeulmoa.cimile.org.ui.community.CommunityMakingActivity
+import java.text.DecimalFormat
+
 
 class MainRecyclerViewAdapter(val ctx: MainActivity, var dataList: ArrayList<AccountData>): RecyclerView.Adapter<MainRecyclerViewAdapter.Holder>(){
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): Holder {
@@ -26,7 +28,8 @@ class MainRecyclerViewAdapter(val ctx: MainActivity, var dataList: ArrayList<Acc
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.account_num.text = dataList[position].acount_number
         holder.account_name.text = dataList[position].name
-        holder.account_balance.text = dataList[position].price.toString()
+        var price = dataList[position].price
+        holder.account_balance.text = insertComma(price)
         holder.btn_account.setOnClickListener {
             ctx.startActivity<AccountDetailActivity>("group_idx" to dataList[position].idx,
                 "account_num" to dataList[position].acount_number,
@@ -59,5 +62,10 @@ class MainRecyclerViewAdapter(val ctx: MainActivity, var dataList: ArrayList<Acc
         var btn_community = itemView.findViewById(R.id.btn_rv_item_main_account_community) as RelativeLayout
         var non_exist = itemView.findViewById(R.id.btn_rv_item_main_account_non_exist) as LinearLayout
         var exist = itemView.findViewById(R.id.btn_rv_item_main_account_exist) as TextView
+    }
+
+    fun insertComma(money:Int):String{
+        val formatter = DecimalFormat("###,###")
+        return formatter.format(money)
     }
 }

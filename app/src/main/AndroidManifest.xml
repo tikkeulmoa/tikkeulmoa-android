@@ -12,7 +12,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.community.CalendarActivity">
+        <activity android:name=".ui.calendar.CalendarActivity">
         </activity>
         <activity android:name=".ui.community.WriteActivity">
         </activity>
@@ -27,13 +27,14 @@
         <activity android:name=".ui.account.AccountMakingActivity">
         </activity>
         <activity android:name=".ui.login.LoginActivity">
-        </activity>
-        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.MainActivity">
+
         </activity>
     </application>
 
