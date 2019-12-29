@@ -3,7 +3,7 @@
 - 농업인 모임의 공금을 관리하는 커뮤니티 플랫폼
 
 ------
-<img src="https://user-images.githubusercontent.com/41736866/71554170-145b2a00-2a5f-11ea-8deb-646d98ef0a3d.png" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/41736866/71554179-3c4a8d80-2a5f-11ea-8432-24cec6bea3f1.png" width="70%"></img>
 ## ScreenShot
 
 ## Development Environment
